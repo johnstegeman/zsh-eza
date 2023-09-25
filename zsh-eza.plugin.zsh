@@ -17,14 +17,14 @@ if [[ $PMSPEC != *f* ]]; then
   fpath+=( "${0:h}/functions" )
 fi
 
-autoload -Uz .zsh-exa
+autoload -Uz .zsh-eza
 
 # Load plugin
-(( ${+functions[.zsh-exa]} )) && {
-  .zsh-exa; exit_code=$?
+(( ${+functions[.zsh-eza]} )) && {
+  .zsh-eza; exit_code=$?
 }
 
 (( exit_code )) && {
-  print "Error loading zsh-exa plugin, exit code: $exit_code"
+  print "Error loading zsh-eza plugin, exit code: $exit_code"
   exit $exit_code
 }
